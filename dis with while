@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int main()
+{
+  float a,b,c,D,x1,x2;
+  char agree1[10],agree2[10];
+  int y=0;
+  strcpy(agree1,"да");
+    do
+    {
+    printf("Введите первое значение: ");
+    scanf("%f", &a);
+    printf("Введите второе значение: ");
+    scanf("%f", &b);
+    printf("Введите третье значение: ");
+    scanf("%f", &c);
+    D=b*b-4*a*c;
+    printf("D = %f\n",D);
+    if (D<0){
+        printf("Корней нет");
+    }
+    if (D==0){
+        x1=-b+(sqrt(D))/(2*a);
+        printf("Корень x1 = %f",x1);
+    }
+    if (D>0){
+        x1=(-b+sqrt(D))/(2*a);
+        x2=(-b-sqrt(D))/(2*a);
+        printf("Корень x1 = %f\n",x1);
+        printf("Корень x2 = %f\n",x2);
+    }
+    printf("Желаете продолжить?");
+    scanf("%s", agree2);
+    if (strcmp (agree1, agree2)==0){
+        y=1;
+    }else y=0;
+    
+    }while(y==1);
+    return 0;
+}
