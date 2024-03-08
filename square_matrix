@@ -10,7 +10,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 int main()
 {
 int m=2;
-int i,j,k,x=0;
+int i,j,x=0;
 int матрица[m][m], sqr[m][m];
  
     for (int i=0; i<m; i++)
