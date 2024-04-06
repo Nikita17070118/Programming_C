@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+ 
+int main() {
+    FILE *file;
+    FILE *file1;
+    int x[256];
+    file = fopen("laba_6.txt", "r");
+    file1 = fopen("output.txt", "a+t");
+    
+    for (int i=0; i<5; i++){
+    fgets(x, 256, file);
+    printf(x);
+    }
+ 
+    //Пишем в файл
+    //fprintf(file1, file);
+    //Закрываем файл
+    //fclose(file);
+    //getch();
+}
